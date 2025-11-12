@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Rohit Modern Public School | Vijay Nagar, Ghaziabad</title>
-    <meta name="description" content="Rohit Modern Public School in Vijay Nagar, Ghaziabad provides quality education and holistic development for students. Visit our official website for details.">
-    <meta name="keywords" content="Rohit Modern, Rohit Modern Public School, Rohit Modern Public School Ghaziabad, Best CBSE School in Ghaziabad, Top English Medium School in Vijay Nagar, Rohit Modern School Admissions 2025, Modern Education in Ghaziabad, Rohit Modern Public School Fees Structure, Rohit Modern Public School Activities, Best School for Overall Development in Ghaziabad, Rohit Modern Public School Contact Details, Top Academic Results School in Ghaziabad, Rohit Modern School Infrastructure, Best Play to Senior Secondary School in Ghaziabad, Rohit Modern Public School Website, CBSE Affiliated Schools in Ghaziabad, Top 5 Schools in Ghaziabad, Top 10 Schools in Ghaziabad List, Best School in Ghaziabad CBSE, Top 20 Schools in Ghaziabad">
+    <meta name="description"
+        content="Rohit Modern Public School in Vijay Nagar, Ghaziabad provides quality education and holistic development for students. Visit our official website for details.">
+    <meta name="keywords"
+        content="rohit modern, rohit modern public school, rohit modern public school ghaziabad, Rohit Modern, Rohit Modern Public School, Rohit Modern Public School Ghaziabad, Best CBSE School in Ghaziabad, Top English Medium School in Vijay Nagar, Rohit Modern School Admissions 2025, Modern Education in Ghaziabad, Rohit Modern Public School Fees Structure, Rohit Modern Public School Activities, Best School for Overall Development in Ghaziabad, Rohit Modern Public School Contact Details, Top Academic Results School in Ghaziabad, Rohit Modern School Infrastructure, Best Play to Senior Secondary School in Ghaziabad, Rohit Modern Public School Website, CBSE Affiliated Schools in Ghaziabad">
     <meta name="author" content="Rohit Modern Public School">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -13,6 +15,7 @@
     <!-- Apna logo favicon set karne ke liye -->
     <link rel="apple-touch-icon" href="logo.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Inlined from styles.css */
         * {
@@ -48,6 +51,124 @@
             /* general faculty/photo offset (used by faculty images) */
             --photo-top-offset: 45%;
             /* adjust once if you want a taller/shorter header */
+
+            /* Teaching Staff Section Variables */
+            --card-bg-color: #ffffff;
+            --section-bg-color: #f8f9ff;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            --gradient-border: linear-gradient(45deg, #6a11cb, #2575fc);
+        }
+
+        /* Teaching Staff Section Styles */
+        .teaching-staff {
+            background-color: var(--section-bg-color);
+            padding: 80px 0;
+        }
+
+        .staff-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .staff-section {
+            margin-bottom: 60px;
+        }
+
+        .staff-section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .staff-section-title h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .staff-section-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-border);
+            border-radius: 2px;
+            margin-top: 8px;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .staff-card {
+            background: var(--card-bg-color);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .staff-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-border);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .staff-name {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 15px 0 5px;
+        }
+
+        .staff-subject {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .staff-qualification {
+            font-size: 0.85rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .staff-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .staff-section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .staff-card {
+                padding: 20px;
+            }
         }
 
         html {
@@ -542,6 +663,152 @@
 
         .faculty-info p {
             color: #666;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .gallery-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .gallery-wrapper {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-scroll {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            gap: 20px;
+            padding: 20px;
+            background: white;
+        }
+
+        .gallery-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .gallery-item {
+            flex: 0 0 280px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transition: all 1ms ease-in;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .gallery-item {
+                flex: 0 0 200px;
+                height: 180px;
+            }
+
+            .gallery-scroll {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-section {
+                padding: 40px 0;
+            }
+
+            .gallery-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .gallery-item {
+                flex: 0 0 150px;
+                height: 120px;
+            }
+
+            .gallery-scroll {
+                gap: 10px;
+                padding: 10px;
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
         }
 
         /* Activities Section */
@@ -1172,16 +1439,16 @@
                     <p>Principal</p>
                 </div>
                 <div class="leader-card">
-                    <div class="leader-img"><img src="rohitsir.webp" alt="Arvind Sharma" loading="lazy"
-                            data-name="Arvind Sharma"></div>
-                    <h3>Arvind Sharma</h3>
+                    <div class="leader-img"><img src="Arvindji.webp" alt="Arvind Sir" loading="lazy"
+                            data-name="Arvind Sir"></div>
+                    <h3>Arvind Sir</h3>
                     <p>Incharge</p>
                 </div>
                 <div class="leader-card">
                     <div class="leader-img"><img src="Madhuji.webp" alt="Madhu Sharma" loading="lazy"
                             data-name="Madhu Sharma"></div>
                     <h3>Madhu Sharma</h3>
-                    <p>Wise Principal</p>
+                    <p>Vise Principal</p>
                 </div>
             </div>
         </div>
@@ -1216,14 +1483,15 @@
         </div>
     </section>
 
-        <!-- Faculty Section -->
+    <!-- Faculty Section -->
     <section class="faculty" id="faculty">
         <div class="container">
             <h2 class="section-title">Computer Arts & Education Department</h2>
             <div class="faculty-grid">
 
                 <div class="faculty-card">
-                    <div class="faculty-img"><img src="Bhavnaji1.webp" alt="Bhavna Mam" loading="lazy" data-name="Bhavna Mam">
+                    <div class="faculty-img"><img src="Bhavnaji1.webp" alt="Bhavna Mam" loading="lazy"
+                            data-name="Bhavna Mam">
                     </div>
                     <div class="faculty-info">
                         <h3>Bhavna Mam</h3>
@@ -1234,7 +1502,8 @@
                 </div>
 
                 <div class="faculty-card">
-                    <div class="faculty-img"><img src="Rcomputer.webp" alt="Rohit sir" loading="lazy" data-name="Rohit Sir">
+                    <div class="faculty-img"><img src="Rcomputer.webp" alt="Rohit sir" loading="lazy"
+                            data-name="Rohit Sir">
                     </div>
                     <div class="faculty-info">
                         <h3>Rohit Sir</h3>
@@ -1254,115 +1523,255 @@
                     </div>
 
                 </div>
+                <div class="faculty-card">
+                    <div class="faculty-img"><img src="Sumitji.webp" alt="Sumit" loading="lazy"
+                            data-name="Sumit Sir"></div>
+                    <div class="faculty-info">
+                        <h3>Sumit Sir</h3>
+                        <p>Teacher - karate</p>
+                        <p>Qualification: Black Belt, 2nd Dan (Karate)</p>
+                    </div>
+
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Additional / Supporting Staff Section -->
-    <section class="additional-faculty" id="additional-faculty">
-        <div class="container">
-            <h2 class="section-title">Teaching Support Team</h2>
-            <p style="text-align:center; max-width:900px; margin:0.5rem auto 1.25rem; color:#444;">Supporting staff and
-                assistant teachers who help run day-to-day activities. Click a name to highlight.</p>
 
-            <div class="staff-grid" role="list">
-                <div class="staff-card"
-                    style="background:#FFD6D6;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Bhavna Mam</a></div>
-                <div class="staff-card"
-                    style="background:#B8FFF9;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Priyanshi Mam</a></div>
-                <div class="staff-card"
-                    style="background:#D6E4FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Hirdesh Sir</a></div>
-                <div class="staff-card"
-                    style="background:#F5D0FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Gulista Mam</a></div>
-                <div class="staff-card"
-                    style="background:#C8F8FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Yashodha Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFE9B5;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Vishakha Mam</a></div>
-                <div class="staff-card"
-                    style="background:#E1FFC2;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Varsha Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFD8C2;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Rubby Mam</a></div>
-                <div class="staff-card"
-                    style="background:#E0D6FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sunita Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFC6E0;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sashi Pal Mam</a></div>
-                <div class="staff-card"
-                    style="background:#C6FFF3;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Archana Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFE2CC;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Piyadas Mam</a></div>
-                <div class="staff-card"
-                    style="background:#CCE5FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Muskan Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFF5CC;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Mansi Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFD1D1;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Nidhi Mam</a></div>
-                <div class="staff-card"
-                    style="background:#D4FFEF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sabana Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFD6F3;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Vandana Mam</a></div>
-                <div class="staff-card"
-                    style="background:#D6E8FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sanjana Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFEEDD;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Shilpi Mam</a></div>
-                <div class="staff-card"
-                    style="background:#D5FFDA;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sweta Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFE4CC;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Nargis Mam</a></div>
-                <div class="staff-card"
-                    style="background:#E8D7FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Monika Mam</a></div>
-                <div class="staff-card"
-                    style="background:#CCFFF9;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Saloni Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFD6C6;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Komal Mam</a></div>
-                <div class="staff-card"
-                    style="background:#D6FFF8;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Mehak Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFF6C6;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Aarthi Mam</a></div>
-                <div class="staff-card"
-                    style="background:#E8D6FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sheetal Mam</a></div>
-                <div class="staff-card"
-                    style="background:#CDEBFF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Fatima Mam</a></div>
-                <div class="staff-card"
-                    style="background:#D9FFDD;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Saroj Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFECC2;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sumit Sir</a></div>
-                <div class="staff-card"
-                    style="background:#D7E7FF;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Reenu Mam</a></div>
-                <div class="staff-card"
-                    style="background:#FFE1F5;color:#333;box-shadow:0 4px 10px rgba(0,0,0,0.15);padding:12px;border-radius:10px;margin:8px;text-align:center;font-weight:600;"
-                    role="listitem"><a href="#">Sonali Mam</a></div>
+
+    <!-- Teaching Staff Section -->
+    <section class="teaching-staff" id="staff">
+        <div class="staff-container">
+            <!-- PGT Section -->
+            <div class="staff-section">
+                <div class="staff-section-title">
+                    <h2><i class="fas fa-star"></i>Post Graduate Teachers (PGT)</h2>
+                </div>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Kalpana Sharma</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Madhu Sharma</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mr. Arvind Nimesh</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Bhawna Kashyap</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Priyanshi Yadav</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sunita Sahu</div>
+                        <p>Computer Teacher</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mr. Hirdesh Sharma</div>
+
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Renu Rao</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mr. Rohit Sharma</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sanjita Khatoon</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- TGT Section -->
+            <div class="staff-section">
+                <div class="staff-section-title">
+                    <h2><i class="fas fa-lightbulb"></i>Trained Graduate Teachers (TGT)</h2>
+                </div>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sanjana Goyal</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sheetal Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Monika Kansal</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Saloni Bhardwaj</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Komal Pathak</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Renu Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Sanjana Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Ruby Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Shilpi Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Archana Verma</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sweta Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. ShashiPal Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Nargis Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Nidhi Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Vandana Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sabana Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Piya Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Mansi Bhardwajd</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Yashodha Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Varsha Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Vishaka Mam</div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mother Teachers Section -->
+            <div class="staff-section">
+                <div class="staff-section-title">
+                    <h2><i class="fas fa-heart"></i>Mother Teachers</h2>
+                </div>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Aarti Yadav Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Saroj Vishwas</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Mrs. Sonali Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Phatma Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Mehak Mam</div>
+
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-name">Miss. Muskan Safi.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Memories Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-container">
+            <h2 class="gallery-title">Our School Memories</h2>
+            <div class="gallery-wrapper">
+                <div class="gallery-scroll">
+                    <!-- Image 1 -->
+                    <div class="gallery-item">
+                        <img src="img1.webp"
+                            alt="School Event 1">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="gallery-item">
+                        <img src="img2.webp" alt="Sports Day">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="gallery-item">
+                        <img src="img3.webp"
+                            alt="Cultural Fest">
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="gallery-item">
+                        <img src="img4.webp"
+                            alt="Annual Function">
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="gallery-item">
+                        <img src="img5.webp"
+                            alt="Classroom Activity">
+                    </div>
+                    <!-- Image 6 -->
+                    <div class="gallery-item">
+                        <img src="img7.webp" alt="Field Trip">
+                    </div>
+                    <!-- Image 7 -->
+                    <div class="gallery-item">
+                        <img src="img8.webp"
+                            alt="Art Exhibition">
+                    </div>
+                    <!-- Image 10 -->
+                    <div class="gallery-item">
+                        <img src="img9.webp"
+                            alt="Art Exhibition">
+                    </div>
+                    <!-- Image 8 -->
+                    <div class="gallery-item">
+                        <img src="img9.webp"
+                            alt="School Assembly">
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -1456,6 +1865,8 @@
         </div>
     </section>
 
+
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1509,13 +1920,15 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                                required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="E.g. 1234567890" required>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="E.g. 1234567890"
+                                required>
                         </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
 
                 </div>
@@ -1696,17 +2109,42 @@
                 if (window.YT && window.YT.Player) onYouTubeIframeAPIReady();
             }, 1000);
         })();
+
+        // Gallery Auto-Scroll with Pause on Hover
+        (function () {
+            const galleryScroll = document.querySelector('.gallery-scroll');
+            if (!galleryScroll) return;
+
+            let isHovered = false;
+
+            // Pause animation on hover
+            galleryScroll.addEventListener('mouseenter', () => {
+                isHovered = true;
+                galleryScroll.style.animationPlayState = 'paused';
+            });
+
+            // Resume animation when mouse leaves
+            galleryScroll.addEventListener('mouseleave', () => {
+                isHovered = false;
+                galleryScroll.style.animationPlayState = 'running';
+            });
+
+            // For touch devices, pause on touch and resume after 3 seconds
+            galleryScroll.addEventListener('touchstart', () => {
+                galleryScroll.style.animationPlayState = 'paused';
+            });
+
+            galleryScroll.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    if (!isHovered) {
+                        galleryScroll.style.animationPlayState = 'running';
+                    }
+                }, 3000);
+            });
+        })();
     </script>
 
 </body>
 
 
 </html>
-
-
-
-
-
-
-
-
